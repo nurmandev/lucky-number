@@ -1,6 +1,7 @@
 package com.nurmandev.luckynumber;
 
 import android.os.Bundle;
+import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -20,5 +21,22 @@ public class MainActivity extends AppCompatActivity {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
         });
-    }
+
+        Toast.makeText(this, "This is On create", Toast.LENGTH_SHORT).show();
+
+
+        }
+        @Override
+        protected void onStart(){
+            super.onStart();
+            Toast.makeText(this, "This is OnStart", Toast.LENGTH_SHORT).show();
+
+        }
+
+        @Override
+        protected void onResume(){
+            super.onResume();
+            Toast.makeText(this, "This is OnResmu", Toast.LENGTH_SHORT).show();
+
+        }
 }

@@ -17,22 +17,5 @@
         android:text="Hello World!"
         android:textSize="32sp" />
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="32sp"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="399dp" />
-
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello"
-        android:textSize="50px"
-        tools:layout_editor_absoluteX="90dp"
-        tools:layout_editor_absoluteY="94dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

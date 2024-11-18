@@ -10,12 +10,26 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
+    <Button
+        android:id="@+id/btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        android:textSize="32sp" />
+        android:layout_marginTop="96dp"
+        android:text="Go to the next Page"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/openBrowser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/design_default_color_error"
+        android:shadowColor="@color/black"
+        android:text="Open Browser"
+        tools:layout_editor_absoluteX="136dp"
+        tools:layout_editor_absoluteY="324dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

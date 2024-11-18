@@ -1,6 +1,10 @@
 package com.nurmandev.luckynumber;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
@@ -16,27 +20,35 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        Button btn = findViewById(R.id.btn);
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToSecondActivity();
+            }
         });
 
-        Toast.makeText(this, "This is On create", Toast.LENGTH_SHORT).show();
-
-
-        }
-        @Override
-        protected void onStart(){
-            super.onStart();
-            Toast.makeText(this, "This is OnStart", Toast.LENGTH_SHORT).show();
-
+        Button btn2 = findViewById(R.id.openBrowser);
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                goToWeb();
+            }
+        });
         }
 
-        @Override
-        protected void onResume(){
-            super.onResume();
-            Toast.makeText(this, "This is OnResmu", Toast.LENGTH_SHORT).show();
-
+        public void goToSecondActivity(){
+            Intent intent = new Intent(this, SecondActivity.class);
+            startActivity(intent);
         }
+
+        public void goToWeb(){
+            Uri uri = Uri.parse("https://mail.google.com/mail/u/0/");
+            Intent intent = new Intent(Intent.ACTION_VIEW, uri);
+            startActivity(intent);
+        }
+
+
+
 }

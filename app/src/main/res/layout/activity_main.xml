@@ -10,26 +10,41 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/btn"
+    <TextView
+        android:id="@+id/lucky"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="96dp"
-        android:text="Go to the next Page"
+        android:text="Welcome To Lucky Number"
+        android:textColor="@color/design_default_color_error"
+        android:textSize="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <EditText
+        android:id="@+id/user_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="142dp"
+        android:hint="Please Enter Your Name"
+        app:circularflow_defaultRadius="@android:dimen/dialog_min_width_major"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lucky" />
+
     <Button
         android:id="@+id/openBrowser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="84dp"
         android:background="@color/design_default_color_error"
         android:shadowColor="@color/black"
-        android:text="Open Browser"
-        tools:layout_editor_absoluteX="136dp"
-        tools:layout_editor_absoluteY="324dp" />
+        android:text="Wish me a Luck!"
+        app:layout_constraintStart_toStartOf="@+id/user_name"
+        app:layout_constraintTop_toBottomOf="@+id/user_name" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -46,7 +46,7 @@ public class SecondActivity extends AppCompatActivity {
         shareButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                shareData(userName,random_Num);
+                shareData(userName, String.valueOf(random_Num));
             }
         });
     }

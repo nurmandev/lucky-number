@@ -40,7 +40,7 @@
         android:layout_marginBottom="220dp"
         android:background="@color/design_default_color_error"
         android:shadowColor="@color/black"
-        android:text="Wish me a Luck!"
+        android:text="Share the result"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
